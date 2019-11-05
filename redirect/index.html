@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <script>
+            var params = new URLSearchParams(location.search);
+            var url = decodeURIComponent(params.get("url"));
+            
+            var div = document.createElement("div");
+            div.innerText = "Redirecting you to " + url + "...";
+            document.getElementsByTagName("body")[0].appendChild(div);
+            
+            window.location = url;
+        </script>
+    </body>
+</html>
